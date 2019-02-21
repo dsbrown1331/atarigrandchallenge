@@ -61,7 +61,7 @@ class AtariDataset():
                             curr_trans['frame']    = int(curr_data[0])
                             curr_trans['reward']   = int(curr_data[1])
                             curr_trans['score']    = int(curr_data[2])
-                            curr_trans['terminal'] = int(curr_data[3])
+                            curr_trans['terminal'] = int("True" == curr_data[3])
                             curr_trans['action']   = int(curr_data[4])
                             curr_traj.append(curr_trans)
                 trajectories[game][int(traj.split('.txt')[0])] = curr_traj
